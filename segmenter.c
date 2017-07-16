@@ -1,4 +1,15 @@
-/*
+all:
+	gcc -Wall -g segmenter.c -o segmenter -lavformat -lavcodec -lavutil
+
+clean:
+	rm segmenter
+
+install: segmenter
+	cp segmenter /usr/local/bin/
+
+uninstall:
+	rm /usr/local/bin/segmenter/*
+
  * Copyright (c) 2009 Chase Douglas
  *
  * This program is free software; you can redistribute it and/or
